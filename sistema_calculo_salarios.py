@@ -1,6 +1,5 @@
 from abc import ABC, abstractmethod
-from rich import print
-
+from rich import prin
 
 class Funcionario(ABC):
 
