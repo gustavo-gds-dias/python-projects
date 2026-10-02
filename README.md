@@ -1,43 +1,88 @@
-# Projetos Python
+# Python Projects
 
-Repositório com projetos desenvolvidos durante meus estudos de Python, com foco em prática de lógica de programação, estruturas de dados, funções, Programação Orientada a Objetos e criação de pequenos sistemas.
+Repositório com projetos desenvolvidos durante meus estudos de programação, com foco em Python, lógica de programação, orientação a objetos, automação, manipulação de dados, desenvolvimento de aplicações web e integração com APIs.
 
 ## Projetos
 
-### Bomba Relógio
-
-Jogo desenvolvido em Python no qual o jogador precisa descobrir uma senha de 4 números antes que o tempo acabe.
-
-O jogo possui um número limitado de tentativas e fornece dicas durante as tentativas.
-
-**Conceitos praticados:** variáveis, tipos de dados, estruturas condicionais, laços de repetição, funções, números aleatórios, entrada e saída de dados e threads.
-
 ### Sistema de Estoque
 
-Sistema desenvolvido em Python para gerenciamento de produtos e controle de estoque.
+Sistema desenvolvido em Python para praticar conceitos de Programação Orientada a Objetos (POO).
 
-É possível cadastrar produtos, consultar informações, adicionar e remover quantidades do estoque, alterar preços e calcular o valor total dos produtos.
+Principais funcionalidades:
 
-**Conceitos praticados:** Programação Orientada a Objetos, classes, objetos, métodos, listas, dicionários, encapsulamento e organização de código.
+* Cadastro e remoção de produtos
+* Consulta de produtos
+* Controle de estoque
+* Alteração de preços
+* Cálculo do valor total do estoque
 
-### Sistema de Cálculo de Salários
+**Tecnologias:** Python, POO
 
-Sistema desenvolvido em Python para realizar cálculos de salários de funcionários horistas e mensalistas.
+[Ver projeto](./Projetos/sistema-estoque)
 
-O usuário informa os dados do funcionário e a porcentagem de desconto, e o sistema calcula o salário final.
+---
 
-**Conceitos praticados:** Programação Orientada a Objetos, classes abstratas, herança, polimorfismo, métodos, operações matemáticas, entrada de dados e organização de código.
+### Chatbot com IA
 
-## Tecnologias
+Chatbot desenvolvido durante os estudos de integração de aplicações Python com APIs de inteligência artificial.
 
-**Python | Git | GitHub**
+Principais recursos:
 
-## Sobre o repositório
+* Interface de chat
+* Integração com API de IA
+* Uso de Streamlit
+* Gerenciamento da chave da API por meio de secrets
 
-Esses projetos foram desenvolvidos durante meus estudos e têm como objetivo colocar em prática os conceitos que estou aprendendo.
+**Tecnologias:** Python, Streamlit, OpenAI SDK, Gemini API
 
-Atualmente estou estudando Python, com foco em Programação Orientada a Objetos e desenvolvimento back-end. Também estou aprendendo Git e GitHub para organizar e acompanhar meus projetos.
+[Ver projeto](./Projetos/hashtag-chatbot-ia)
 
-## Próximos passos
+---
 
-Pretendo continuar adicionando novos projetos conforme avanço nos estudos, principalmente envolvendo Python, bancos de dados e desenvolvimento back-end.
+### Sistema de Vendas
+
+Aplicação web para cadastro e análise de vendas, utilizando uma base de dados em CSV.
+
+Principais funcionalidades:
+
+* Cadastro de vendas
+* Visualização das vendas cadastradas
+* Cálculo do faturamento total
+* Gráfico de vendas por vendedor
+* Gráfico de vendas por produto
+
+**Tecnologias:** Python, Streamlit, Pandas, Plotly, CSV
+
+[Ver projeto](./Projetos/site-vendas)
+
+---
+
+### Automação de Cadastro
+
+Projeto de automação desenvolvido para praticar a utilização do Python no preenchimento automático de formulários a partir de dados armazenados em CSV.
+
+Principais recursos:
+
+* Leitura de dados com Pandas
+* Automação de teclado e mouse
+* Preenchimento automático de formulários
+* Leitura de dados de arquivos CSV
+
+**Tecnologias:** Python, PyAutoGUI, Pandas, CSV
+
+[Ver projeto](./Projetos/automacao-cadastro)
+
+## Objetivo
+
+Este repositório reúne projetos práticos desenvolvidos durante minha evolução nos estudos de programação, servindo como registro do aprendizado e portfólio dos conhecimentos adquiridos.
+
+## Tecnologias estudadas
+
+* Python
+* Programação Orientada a Objetos
+* Streamlit
+* Pandas
+* Plotly
+* PyAutoGUI
+* APIs
+* Git e GitHub
