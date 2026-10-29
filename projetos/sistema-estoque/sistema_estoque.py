@@ -13,13 +13,19 @@ class Produto:
         self.quantidade += somar_estoque
 
     def remover_quant(self, subtrair_estoque):
-        if subtrair_estoque <= self.quantidade:
+        if 0 < subtrair_estoque <= self.quantidade:
             self.quantidade -= subtrair_estoque
-        else:
-            print("Quantidade insuficiente em estoque")
+            return True
+       
+        return False
 
     def __str__(self):
-        return f"Nome: {self.nome} | Preço: R${self.preco:.2f} | Quantidade: {self.quantidade} | Código: {self.codigo}"
+        return (
+            f"Nome: {self.nome} | "
+            f"Preço: R${self.preco:.2f} | "
+            f"Quantidade: {self.quantidade} | "
+            f"Código: {self.codigo}"
+        )
 
 
 class Estoque:
@@ -31,44 +37,45 @@ class Estoque:
         self.produtos.append(produto)
 
     def listar_produtos(self):
-        contador = 0
+        if not self.produtos:
+            print("Nenhum produto cadastrado.")
+            return
 
         for produto in self.produtos:
             print(produto)
-            contador += 1
-
-        if contador == 0:
-            print("Nenhum produto cadastrado.")
 
     def buscar_produto(self, nome):
-
         for produto in self.produtos:
-            if produto.nome == nome:
+            if produto.nome.lower() == nome.lower():
                 return produto
+
+        return None
 
     def adicionar_estoque(self, nome, quantidade):
         produto = self.buscar_produto(nome)
 
-        if produto:
+        if produto and quantidade > 0:
             produto.adiciona_quant(quantidade)
-        else:
-            print("Produto não encontrado")
+            return True
+
+        return False
 
     def remover_estoque(self, nome, quantidade):
         produto = self.buscar_produto(nome)
 
         if produto:
-            produto.remover_quant(quantidade)
-        else:
-            print("Produto não encontrado")
+            return produto.remover_quant(quantidade)
+
+        return False
 
     def alterar_preco(self, nome, novo_preco):
         produto = self.buscar_produto(nome)
 
-        if produto:
+        if produto and novo_preco >= 0:
             produto.altera_preco(novo_preco)
-        else:
-            print("Produto não encontrado")
+            return True
+
+        return False
 
     def calcular_valor_total(self):
         total = 0
@@ -83,8 +90,9 @@ class Estoque:
 
         if produto:
             self.produtos.remove(produto)
-        else:
-            print("Produto não encontrado")
+            return True
+
+        return False
 
 
 def main():
@@ -94,70 +102,127 @@ def main():
         print()
         print("==== ESTOQUE ====")
 
-        opcao = int(input(
-            "[1] Cadastrar produto\n"
-            "[2] Remover produto\n"
-            "[3] Listar produtos\n"
-            "[4] Buscar produto\n"
-            "[5] Adicionar estoque\n"
-            "[6] Remover estoque\n"
-            "[7] Alterar preço\n"
-            "[8] Ver valor total\n"
-            "[0] Sair\n\n"
-            "Escolha uma opção: "
-        ))
+        try:
+            opcao = int(input(
+                "[1] Cadastrar produto\n"
+                "[2] Remover produto\n"
+                "[3] Listar produtos\n"
+                "[4] Buscar produto\n"
+                "[5] Adicionar estoque\n"
+                "[6] Remover estoque\n"
+                "[7] Alterar preço\n"
+                "[8] Ver valor total\n"
+                "[0] Sair\n\n"
+                "Escolha uma opção: "
+            ))
+        except ValueError:
+            print("Digite uma opção numérica válida.")
+            continue
 
         if opcao == 0:
             print("Encerrando...")
             break
 
-        if opcao == 1:
+        elif opcao == 1:
             nome = input("Nome: ")
-            preco = float(input("Preço: R$"))
-            quantidade = int(input("Quantidade: "))
             codigo = input("Código: ")
+
+            try:
+                preco = float(input("Preço: R$"))
+                quantidade = int(input("Quantidade: "))
+            except ValueError:
+                print("Preço ou quantidade inválidos.")
+                continue
+
+            if preco < 0 or quantidade < 0:
+                print("Preço e quantidade não podem ser negativos.")
+                continue
+
+            if estoque.buscar_produto(nome):
+                print("Já existe um produto com esse nome.")
+                continue
 
             produto = Produto(nome, preco, quantidade, codigo)
             estoque.cadastrar_produto(produto)
 
-        if opcao == 2:
-            nome = input("Nome: ")
-            estoque.remove_produto(nome)
+            print("Produto cadastrado com sucesso.")
 
-        if opcao == 3:
+        elif opcao == 2:
+            nome = input("Nome: ")
+
+            if estoque.remove_produto(nome):
+                print("Produto removido com sucesso.")
+            else:
+                print("Produto não encontrado.")
+
+        elif opcao == 3:
             estoque.listar_produtos()
 
-        if opcao == 4:
+        elif opcao == 4:
             nome = input("Nome: ")
-
             produto = estoque.buscar_produto(nome)
 
             if produto:
                 print(produto)
             else:
-                print("Produto não encontrado")
+                print("Produto não encontrado.")
 
-        if opcao == 5:
+        elif opcao == 5:
             nome = input("Nome: ")
-            quantidade = int(input("Quantidade: "))
 
-            estoque.adicionar_estoque(nome, quantidade)
+            try:
+                quantidade = int(input("Quantidade: "))
+            except ValueError:
+                print("Digite uma quantidade inteira válida.")
+                continue
 
-        if opcao == 6:
+            if estoque.adicionar_estoque(nome, quantidade):
+                print("Estoque adicionado com sucesso.")
+            elif not estoque.buscar_produto(nome):
+                print("Produto não encontrado.")
+            else:
+                print("A quantidade deve ser maior que zero.")
+
+        elif opcao == 6:
             nome = input("Nome: ")
-            quantidade = int(input("Quantidade: "))
 
-            estoque.remover_estoque(nome, quantidade)
+            try:
+                quantidade = int(input("Quantidade: "))
+            except ValueError:
+                print("Digite uma quantidade inteira válida.")
+                continue
 
-        if opcao == 7:
+            if estoque.remover_estoque(nome, quantidade):
+                print("Estoque removido com sucesso.")
+            elif not estoque.buscar_produto(nome):
+                print("Produto não encontrado.")
+            elif quantidade <= 0:
+                print("A quantidade deve ser maior que zero.")
+            else:
+                print("Quantidade insuficiente em estoque.")
+
+        elif opcao == 7:
             nome = input("Nome: ")
-            preco = float(input("Preço: R$"))
 
-            estoque.alterar_preco(nome, preco)
+            try:
+                preco = float(input("Novo preço: R$"))
+            except ValueError:
+                print("Digite um preço válido.")
+                continue
 
-        if opcao == 8:
+            if estoque.alterar_preco(nome, preco):
+                print("Preço alterado com sucesso.")
+            elif not estoque.buscar_produto(nome):
+                print("Produto não encontrado.")
+            else:
+                print("O preço não pode ser negativo.")
+
+        elif opcao == 8:
             total = estoque.calcular_valor_total()
             print(f"Valor total do estoque: R${total:.2f}")
+
+        else:
+            print("Opção inválida. Tente novamente.")
 
 
 if __name__ == "__main__":
