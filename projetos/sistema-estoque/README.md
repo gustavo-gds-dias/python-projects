@@ -2,34 +2,38 @@
 
 Sistema de gerenciamento de estoque desenvolvido em Python para praticar conceitos de Programação Orientada a Objetos (POO).
 
-O programa permite cadastrar produtos e realizar operações de gerenciamento através de um menu no terminal.
+O programa permite cadastrar produtos e realizar operações de gerenciamento através de um menu interativo no terminal.
 
 ## Tecnologias utilizadas
 
-* Python
-* Programação Orientada a Objetos
+- Python
+- Programação Orientada a Objetos
 
 ## Funcionalidades
 
-* Cadastro de produtos
-* Remoção de produtos
-* Listagem dos produtos cadastrados
-* Busca de produtos pelo nome
-* Adição de produtos ao estoque
-* Remoção de produtos do estoque
-* Alteração de preços
-* Cálculo do valor total do estoque
+- Cadastro de produtos
+- Remoção de produtos
+- Listagem dos produtos cadastrados
+- Busca de produtos pelo nome
+- Adição de quantidades ao estoque
+- Remoção de quantidades do estoque
+- Alteração de preços
+- Cálculo do valor total do estoque
+- Validação de dados durante as operações
+- Tratamento de erros de entrada
 
 ## Conceitos praticados
 
-* Classes e objetos
-* Métodos
-* Construtor `__init__`
-* Método `__str__`
-* Listas de objetos
-* Encapsulamento básico
-* Interação entre classes
-* Estruturas de repetição e condicionais
+- Classes e objetos
+- Métodos e atributos
+- Construtor `__init__`
+- Método especial `__str__`
+- Listas de objetos
+- Encapsulamento básico
+- Interação entre classes
+- Estruturas condicionais e de repetição
+- Retorno de valores booleanos (`True` e `False`)
+- Tratamento de exceções com `try` e `except`
 
 ## Estrutura do projeto
 
@@ -49,8 +53,8 @@ Execute o arquivo pelo terminal:
 python sistema_estoque.py
 ```
 
-Após iniciar, o sistema apresenta um menu com as opções disponíveis para gerenciamento do estoque.
+Após iniciar, o sistema apresenta um menu interativo com as opções disponíveis para gerenciamento do estoque.
 
 ## Objetivo
 
-Projeto desenvolvido durante meus estudos de Python com o objetivo de praticar Programação Orientada a Objetos e desenvolver uma aplicação funcional utilizando os conceitos aprendidos.
+Projeto desenvolvido durante meus estudos de Python com o objetivo de praticar Programação Orientada a Objetos, aplicar conceitos de lógica de programação e desenvolver uma aplicação funcional utilizando os conhecimentos adquiridos.

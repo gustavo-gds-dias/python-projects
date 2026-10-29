@@ -1,6 +1,6 @@
 # Python Projects
 
-Repositório com projetos desenvolvidos durante meus estudos de programação, com foco em Python, lógica de programação, orientação a objetos, automação, manipulação de dados, desenvolvimento de aplicações web e integração com APIs.
+Repositório com projetos desenvolvidos durante meus estudos de programação, utilizando Python para resolver problemas e desenvolver aplicações práticas.
 
 ## Projetos
 
@@ -8,13 +8,12 @@ Repositório com projetos desenvolvidos durante meus estudos de programação, c
 
 Sistema desenvolvido em Python para praticar conceitos de Programação Orientada a Objetos (POO).
 
-Principais funcionalidades:
-
-* Cadastro e remoção de produtos
-* Consulta de produtos
-* Controle de estoque
-* Alteração de preços
-* Cálculo do valor total do estoque
+**Principais funcionalidades:**
+- Cadastro e remoção de produtos
+- Consulta de produtos
+- Controle de estoque
+- Alteração de preços
+- Cálculo do valor total do estoque
 
 **Tecnologias:** Python, POO
 
@@ -26,12 +25,11 @@ Principais funcionalidades:
 
 Chatbot desenvolvido durante os estudos de integração de aplicações Python com APIs de inteligência artificial.
 
-Principais recursos:
-
-* Interface de chat
-* Integração com API de IA
-* Uso de Streamlit
-* Gerenciamento da chave da API por meio de secrets
+**Principais recursos:**
+- Interface de chat
+- Integração com API de inteligência artificial
+- Utilização do Streamlit
+- Gerenciamento da chave da API por meio de secrets
 
 **Tecnologias:** Python, Streamlit, OpenAI SDK, Gemini API
 
@@ -43,13 +41,12 @@ Principais recursos:
 
 Aplicação web para cadastro e análise de vendas, utilizando uma base de dados em CSV.
 
-Principais funcionalidades:
-
-* Cadastro de vendas
-* Visualização das vendas cadastradas
-* Cálculo do faturamento total
-* Gráfico de vendas por vendedor
-* Gráfico de vendas por produto
+**Principais funcionalidades:**
+- Cadastro de vendas
+- Visualização das vendas cadastradas
+- Cálculo do faturamento total
+- Gráfico de vendas por vendedor
+- Gráfico de vendas por produto
 
 **Tecnologias:** Python, Streamlit, Pandas, Plotly, CSV
 
@@ -59,14 +56,12 @@ Principais funcionalidades:
 
 ### Automação de Cadastro
 
-Projeto de automação desenvolvido para praticar a utilização do Python no preenchimento automático de formulários a partir de dados armazenados em CSV.
+Projeto de automação desenvolvido para praticar o preenchimento automático de formulários utilizando dados armazenados em arquivos CSV.
 
-Principais recursos:
-
-* Leitura de dados com Pandas
-* Automação de teclado e mouse
-* Preenchimento automático de formulários
-* Leitura de dados de arquivos CSV
+**Principais recursos:**
+- Leitura e manipulação de dados com Pandas
+- Automação de teclado e mouse
+- Preenchimento automático de formulários
 
 **Tecnologias:** Python, PyAutoGUI, Pandas, CSV
 
@@ -78,11 +73,11 @@ Este repositório reúne projetos práticos desenvolvidos durante minha evoluç�
 
 ## Tecnologias estudadas
 
-* Python
-* Programação Orientada a Objetos
-* Streamlit
-* Pandas
-* Plotly
-* PyAutoGUI
-* APIs
-* Git e GitHub
+- Python
+- Programação Orientada a Objetos
+- Streamlit
+- Pandas
+- Plotly
+- PyAutoGUI
+- APIs
+- Git e GitHub
