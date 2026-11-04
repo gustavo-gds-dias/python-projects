@@ -1,83 +1,90 @@
 # Python Projects
 
-Repositório com projetos desenvolvidos durante meus estudos de programação, utilizando Python para resolver problemas e desenvolver aplicações práticas.
+Repositório com projetos desenvolvidos durante meus estudos de Python, com foco na prática de programação, automação de tarefas, manipulação de dados e desenvolvimento de aplicações.
 
 ## Projetos
 
-### Sistema de Estoque
+### 1. Sistema de Estoque
 
-Sistema desenvolvido em Python para praticar conceitos de Programação Orientada a Objetos (POO).
+Sistema desenvolvido em Python utilizando Programação Orientada a Objetos (POO) para gerenciar produtos e controlar o estoque.
 
-**Principais funcionalidades:**
+**Funcionalidades:**
 - Cadastro e remoção de produtos
 - Consulta de produtos
 - Controle de estoque
 - Alteração de preços
 - Cálculo do valor total do estoque
 
-**Tecnologias:** Python, POO
+**Tecnologias:** Python e POO
 
-[Ver projeto](./Projetos/sistema-estoque)
-
----
-
-### Chatbot com IA
-
-Chatbot desenvolvido durante os estudos de integração de aplicações Python com APIs de inteligência artificial.
-
-**Principais recursos:**
-- Interface de chat
-- Integração com API de inteligência artificial
-- Utilização do Streamlit
-- Gerenciamento da chave da API por meio de secrets
-
-**Tecnologias:** Python, Streamlit, OpenAI SDK, Gemini API
-
-[Ver projeto](./Projetos/hashtag-chatbot-ia)
+[Ver projeto](./projetos/sistema-estoque)
 
 ---
 
-### Sistema de Vendas
+### 2. Chatbot com IA
 
-Aplicação web para cadastro e análise de vendas, utilizando uma base de dados em CSV.
+Aplicação de chat desenvolvida com Streamlit, integrada à API do Google Gemini por meio do OpenAI Python SDK.
 
-**Principais funcionalidades:**
+**Funcionalidades:**
+- Interface de chat no navegador
+- Envio de mensagens para inteligência artificial
+- Exibição do histórico de conversas
+- Integração com API
+- Gerenciamento seguro da chave de acesso
+
+**Tecnologias:** Python, Streamlit, OpenAI Python SDK e Gemini API
+
+[Ver projeto](./projetos/hashtag-chatbot-ia)
+
+---
+
+### 3. Sistema de Vendas
+
+Aplicação web desenvolvida para cadastrar vendas, armazenar informações em CSV e apresentar dados por meio de gráficos.
+
+**Funcionalidades:**
 - Cadastro de vendas
-- Visualização das vendas cadastradas
+- Seleção de vendedores e produtos
+- Armazenamento de dados em CSV
 - Cálculo do faturamento total
-- Gráfico de vendas por vendedor
-- Gráfico de vendas por produto
+- Gráficos de vendas por vendedor e produto
 
-**Tecnologias:** Python, Streamlit, Pandas, Plotly, CSV
+**Tecnologias:** Python, Streamlit, Pandas, Plotly e CSV
 
-[Ver projeto](./Projetos/site-vendas)
+[Ver projeto](./projetos/site-vendas)
 
 ---
 
-### Automação de Cadastro
+### 4. Automação de Cadastro
 
-Projeto de automação desenvolvido para praticar o preenchimento automático de formulários utilizando dados armazenados em arquivos CSV.
+Script desenvolvido em Python para automatizar o preenchimento de formulários em um sistema web utilizando dados de uma planilha CSV.
 
-**Principais recursos:**
-- Leitura e manipulação de dados com Pandas
+**Funcionalidades:**
+- Leitura de dados com Pandas
+- Abertura automática do navegador
 - Automação de teclado e mouse
 - Preenchimento automático de formulários
+- Cadastro de vários produtos em sequência
 
-**Tecnologias:** Python, PyAutoGUI, Pandas, CSV
+**Tecnologias:** Python, PyAutoGUI, Pandas e CSV
 
-[Ver projeto](./Projetos/automacao-cadastro)
+[Ver projeto](./projetos/automacao-cadastro)
 
-## Objetivo
+---
 
-Este repositório reúne projetos práticos desenvolvidos durante minha evolução nos estudos de programação, servindo como registro do aprendizado e portfólio dos conhecimentos adquiridos.
-
-## Tecnologias estudadas
+## Tecnologias e ferramentas
 
 - Python
-- Programação Orientada a Objetos
+- Programação Orientada a Objetos (POO)
 - Streamlit
 - Pandas
 - Plotly
 - PyAutoGUI
 - APIs
 - Git e GitHub
+
+## Objetivo
+
+Este repositório funciona como meu portfólio de estudos em Python, reunindo projetos que desenvolvi para colocar em prática os conhecimentos adquiridos e acompanhar minha evolução como programador.
+
+Os projetos são atualizados conforme avanço nos estudos e aprendo novas ferramentas e tecnologias.
