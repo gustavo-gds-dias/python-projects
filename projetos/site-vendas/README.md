@@ -4,24 +4,24 @@ Aplicação web desenvolvida em Python com Streamlit para cadastro e visualizaç
 
 ## Funcionalidades
 
-* Cadastro de vendas
-* Seleção de data, vendedor e produto
-* Validação de valor e quantidade
-* Armazenamento das vendas em arquivo CSV
-* Visualização das vendas cadastradas
-* Exibição do faturamento total
-* Gráfico de vendas por vendedor
-* Gráfico de vendas por produto
+- Cadastro de vendas
+- Seleção de data, vendedor e produto
+- Validação de valor e quantidade
+- Armazenamento das vendas em arquivo CSV
+- Visualização das vendas cadastradas
+- Exibição do faturamento total
+- Gráfico de vendas por vendedor
+- Gráfico de vendas por produto
 
 ## Tecnologias utilizadas
 
-* Python
-* Streamlit
-* Pandas
-* Plotly
-* CSV
+- Python
+- Streamlit
+- Pandas
+- Plotly
+- CSV
 
-## Estrutura
+## Estrutura do projeto
 
 ```text
 site-vendas/
@@ -33,18 +33,32 @@ site-vendas/
 
 ## Como executar
 
+Clone o repositório:
+
+```bash
+git clone https://github.com/gustavo-gds-dias/python-projects.git
+```
+
+Abra o terminal e acesse a pasta do projeto:
+
+```bash
+cd python-projects/projetos/site-vendas
+```
+
 Instale as dependências:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Execute a aplicação:
+Inicie a aplicação:
 
 ```bash
-streamlit run site_vendas.py
+python -m streamlit run site_vendas.py
 ```
+
+A aplicação será aberta no navegador, geralmente no endereço `http://localhost:8501`.
 
 ## Objetivo
 
-Projeto desenvolvido durante os estudos de Python e Streamlit, com o objetivo de praticar manipulação de dados com Pandas, leitura e gravação de arquivos CSV, criação de interfaces web e visualização de dados com gráficos.
+Projeto desenvolvido durante os estudos de Python e Streamlit, com o objetivo de praticar manipulação de dados com Pandas, leitura e gravação de arquivos CSV, criação de interfaces web e visual

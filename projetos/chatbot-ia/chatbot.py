@@ -56,4 +56,10 @@ if mensagem_usuario:
 
     # exibe a resposta da IA na tela
     st.chat_message("assistant").write(resposta_ia)
- 
+
+
+# No terminal, acesse a pasta do projeto
+#cd projetos/chatbot-ia
+
+# Executa o programa ChatBot com IA
+#python -m streamlit run chatbot.py

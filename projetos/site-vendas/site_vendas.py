@@ -78,3 +78,11 @@ st.plotly_chart(grafico1)
 # Gráfico de Pizza -> Vendas por Produto
 grafico2 = px.pie(tabela_vendas, names="produto", values="valor", hole=0.5)
 st.plotly_chart(grafico2)
+
+# Para executar o projeto, abra o terminal
+
+# Acesse a pasta projetos/site-vendas
+
+# Execute: pip install -r requirements.txt
+
+# Execute: python -m streamlit run site_vendas.py

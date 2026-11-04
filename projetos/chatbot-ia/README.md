@@ -1,25 +1,26 @@
 # Chatbot com IA
 
-Chatbot desenvolvido em Python utilizando Streamlit e integração com uma API de inteligência artificial.
+Chatbot desenvolvido em Python utilizando Streamlit e integração com a API do Google Gemini por meio do OpenAI Python SDK.
 
-O projeto permite enviar mensagens para o modelo de IA através de uma interface web simples e interativa.
-
-## Tecnologias utilizadas
-
-* Python
-* Streamlit
-* OpenAI Python SDK
-* Gemini API
+O projeto permite enviar mensagens para o modelo de inteligência artificial através de uma interface web simples e interativa.
 
 ## Funcionalidades
 
-* Interface de chat no navegador
-* Envio de mensagens para a IA
-* Recebimento e exibição das respostas
-* Integração com API através do SDK da OpenAI
-* Gerenciamento da chave da API utilizando `st.secrets`
+- Interface de chat no navegador
+- Envio de mensagens para a IA
+- Recebimento e exibição das respostas
+- Histórico de conversas durante a sessão
+- Integração com API através do OpenAI Python SDK
+- Gerenciamento da chave da API utilizando `st.secrets`
 
-## Estrutura
+## Tecnologias utilizadas
+
+- Python
+- Streamlit
+- OpenAI Python SDK
+- Gemini API
+
+## Estrutura do projeto
 
 ```text
 chatbot-ia/
@@ -32,11 +33,16 @@ chatbot-ia/
 
 ## Como executar
 
-Clone o repositório e entre na pasta do projeto:
+Clone o repositório:
 
 ```bash
 git clone https://github.com/gustavo-gds-dias/python-projects.git
-cd python-projects/Projetos/chatbot-ia
+```
+
+Abra o terminal e acesse a pasta do projeto:
+
+```bash
+cd python-projects/projetos/chatbot-ia
 ```
 
 Instale as dependências:
@@ -45,26 +51,20 @@ Instale as dependências:
 pip install -r requirements.txt
 ```
 
-Configure a chave da API no arquivo:
-
-```text
-.streamlit/secrets.toml
-```
-
-Exemplo:
+Configure sua chave da API no arquivo `.streamlit/secrets.toml`:
 
 ```toml
 GEMINI_API_KEY = "sua-chave-aqui"
 ```
 
-Depois execute:
+Inicie a aplicação:
 
 ```bash
-streamlit run chatbot.py
+python -m streamlit run chatbot.py
 ```
 
-O Streamlit abrirá o chatbot no navegador.
+A aplicação será aberta no navegador, geralmente no endereço `http://localhost:8501`.
 
 ## Objetivo
 
-Projeto desenvolvido durante meus estudos de Python para praticar integração com APIs, desenvolvimento de interfaces com Streamlit e utilização de inteligência artificial em aplicações Python.
+Projeto desenvolvido durante meus estudos de Python para praticar integração com APIs, desenvolvimento de interfaces com Streamlit, gerenciamento de chaves de acesso e utilização de inteligência artificial em aplicações Python.
